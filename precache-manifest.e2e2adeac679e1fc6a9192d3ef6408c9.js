@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f8421b09b48dde8d63bdaa1877d66329",
+    "revision": "e89d95bbe05aad9ce3bb3d30b5a2a857",
     "url": "/Obi-Wan/index.html"
   },
   {
-    "revision": "b553443f9d16cb543172",
-    "url": "/Obi-Wan/static/css/main.f13d6864.chunk.css"
+    "revision": "de4bf114d812f24967a2",
+    "url": "/Obi-Wan/static/css/main.28d76dda.chunk.css"
   },
   {
     "revision": "e590e120a3c909c1fcc0",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Obi-Wan/static/js/2.9cc8f590.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b553443f9d16cb543172",
-    "url": "/Obi-Wan/static/js/main.2c3b5c9f.chunk.js"
+    "revision": "de4bf114d812f24967a2",
+    "url": "/Obi-Wan/static/js/main.1632a31f.chunk.js"
   },
   {
     "revision": "c4e97a25f33c26689565",

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Obi-Wan/precache-manifest.abd6a9664697f70bb754cd99b0f84357.js"
+  "/Obi-Wan/precache-manifest.e2e2adeac679e1fc6a9192d3ef6408c9.js"
 );
 
 self.addEventListener('message', (event) => {
