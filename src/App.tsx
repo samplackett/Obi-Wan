@@ -21,6 +21,7 @@ function App() {
     createStyles({
       root: {
         textAlign: "center",
+        width: "100%",
         "& > *": {
           margin: theme.spacing(1),
           width: "25ch",
@@ -55,15 +56,43 @@ function App() {
     },
   });
 
+  const useGridStyles = makeStyles({
+    grid: {
+      maxWidth: "100%"
+    }
+  });
+
   const classes = useStyles();
 
   const classesCard = useStylesCard();
 
   const classesButton = useStylesButton();
 
-  const compColours = tinycolor(colour).analogous();
+  const classesGrid = useGridStyles();
+ 
+  const analColours = tinycolor(colour).analogous();
+  const monoColours = tinycolor(colour).monochromatic();
+  const splitColours = tinycolor(colour).splitcomplement();
+  const triColours = tinycolor(colour).triad();
+  const tetColours = tinycolor(colour).tetrad();
 
-  const colourMatrix = compColours.map(function (t: any) {
+  const analMatrix = analColours.map(function (t: any) {
+    return t.toHexString();
+  });
+
+  const monoMatrix = monoColours.map(function (t: any) {
+    return t.toHexString();
+  });
+
+  const splitMatrix = splitColours.map(function (t: any) {
+    return t.toHexString();
+  });
+
+  const triMatrix = triColours.map(function (t: any) {
+    return t.toHexString();
+  });
+
+  const tetMatrix = tetColours.map(function (t: any) {
     return t.toHexString();
   });
 
@@ -103,44 +132,165 @@ function App() {
           onChange={changeColour}
         />
       </form>
+      <br />
       <Typography className={classesCard.root}>
-        Komplementary Kenobi:
+        Analogous Kenobi:
       </Typography>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} className={classesGrid.grid} >
         <Grid item xs={2}>
-          <SpaceJesus fill={colourMatrix[0]} />
-          <Typography className={classesCard.root}>
-            {colourMatrix[0]}
+          <SpaceJesus fill={analMatrix[0]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {analMatrix[0]}
           </Typography>
         </Grid>
         <Grid item xs={2}>
-          <SpaceJesus fill={colourMatrix[1]} />
-          <Typography className={classesCard.root}>
-            {colourMatrix[1]}
+          <SpaceJesus fill={analMatrix[1]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {analMatrix[1]}
           </Typography>
         </Grid>
         <Grid item xs={2}>
-          <SpaceJesus fill={colourMatrix[2]} />
-          <Typography className={classesCard.root}>
-            {colourMatrix[2]}
+          <SpaceJesus fill={analMatrix[2]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {analMatrix[2]}
           </Typography>
         </Grid>
         <Grid item xs={2}>
-          <SpaceJesus fill={colourMatrix[3]} />
-          <Typography className={classesCard.root}>
-            {colourMatrix[3]}
+          <SpaceJesus fill={analMatrix[3]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {analMatrix[3]}
           </Typography>
         </Grid>
         <Grid item xs={2}>
-          <SpaceJesus fill={colourMatrix[4]} />
-          <Typography className={classesCard.root}>
-            {colourMatrix[4]}
+          <SpaceJesus fill={analMatrix[4]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {analMatrix[4]}
           </Typography>
         </Grid>
         <Grid item xs={2}>
-          <SpaceJesus fill={colourMatrix[5]} />
-          <Typography className={classesCard.root}>
-            {colourMatrix[5]}
+          <SpaceJesus fill={analMatrix[5]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {analMatrix[5]}
+          </Typography>
+        </Grid>
+      </Grid>
+      <br />
+      <Typography className={classesCard.root}>
+        MonoKhromatic Kenobi:
+      </Typography>
+      <Grid container spacing={3} className={classesGrid.grid} >
+        <Grid item xs={2}>
+          <SpaceJesus fill={monoMatrix[0]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {monoMatrix[0]}
+          </Typography>
+        </Grid>
+        <Grid item xs={2}>
+          <SpaceJesus fill={monoMatrix[1]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {monoMatrix[1]}
+          </Typography>
+        </Grid>
+        <Grid item xs={2}>
+          <SpaceJesus fill={monoMatrix[2]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {monoMatrix[2]}
+          </Typography>
+        </Grid>
+        <Grid item xs={2}>
+          <SpaceJesus fill={monoMatrix[3]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {monoMatrix[3]}
+          </Typography>
+        </Grid>
+        <Grid item xs={2}>
+          <SpaceJesus fill={monoMatrix[4]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {monoMatrix[4]}
+          </Typography>
+        </Grid>
+        <Grid item xs={2}>
+          <SpaceJesus fill={monoMatrix[5]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {monoMatrix[5]}
+          </Typography>
+        </Grid>
+      </Grid>
+      <br />
+      <Typography className={classesCard.root}>
+        Split Komplement Kenobi:
+      </Typography>
+      <Grid container spacing={3} className={classesGrid.grid} >
+        <Grid item xs={4}>
+          <SpaceJesus fill={splitMatrix[0]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {splitMatrix[0]}
+          </Typography>
+        </Grid>
+        <Grid item xs={4}>
+          <SpaceJesus fill={splitMatrix[1]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {splitMatrix[1]}
+          </Typography>
+        </Grid>
+        <Grid item xs={4}>
+          <SpaceJesus fill={splitMatrix[2]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {splitMatrix[2]}
+          </Typography>
+        </Grid>
+      </Grid>
+      <br />
+      <Typography className={classesCard.root}>
+        Triad Kenobi:
+      </Typography>
+      <Grid container spacing={3} className={classesGrid.grid} >
+        <Grid item xs={4}>
+          <SpaceJesus fill={triMatrix[0]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {triMatrix[0]}
+          </Typography>
+        </Grid>
+        <Grid item xs={4}>
+          <SpaceJesus fill={triMatrix[1]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {triMatrix[1]}
+          </Typography>
+        </Grid>
+        <Grid item xs={4}>
+          <SpaceJesus fill={triMatrix[2]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {triMatrix[2]}
+          </Typography>
+        </Grid>
+      </Grid>
+      <br />
+      <Typography className={classesCard.root}>
+        Tetrad Kenobi:
+      </Typography>
+      <Grid container spacing={3} className={classesGrid.grid} >
+        <Grid item xs={3}>
+          <SpaceJesus fill={tetMatrix[0]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {tetMatrix[0]}
+          </Typography>
+        </Grid>
+        <Grid item xs={3}>
+          <SpaceJesus fill={tetMatrix[1]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {tetMatrix[1]}
+          </Typography>
+        </Grid>
+        <Grid item xs={3}>
+          <SpaceJesus fill={tetMatrix[2]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {tetMatrix[2]}
+          </Typography>
+        </Grid>
+        <Grid item xs={3}>
+          <SpaceJesus fill={tetMatrix[3]} />
+          <Typography style={{textAlign: "center", fontSize: "small"}}>
+            {tetMatrix[3]}
           </Typography>
         </Grid>
       </Grid>
